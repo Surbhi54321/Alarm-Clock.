@@ -1,0 +1,229 @@
+*{
+    padding:0;
+    margin:0;
+    font-family:  'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   
+}
+/* body */
+section{
+    background-image: url("saad-chaudhry-cYpqYxGeqts-unsplash.jpg");
+    background-size: cover;
+    height:100vh;
+    width:100%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+ 
+}
+
+/*page-title*/
+
+.page-title{
+    color:white;
+    position:fixed;
+    top:50px;
+    z-index:1;
+    left:50%;
+    font-size:2rem;
+    transform:translateX(-50%);
+}
+/* container for the whole alarm clock */
+.container{
+    border:5px solid white;
+    border-radius:20px;
+    width:45%;
+    margin-top:30px;
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    
+}
+
+#setAlarm-list{
+    max-height:100px;
+    width:100%;
+    padding:5px;
+    overflow-y: scroll;
+ }
+
+ #setAlarm-list::-webkit-scrollbar{
+    width:13px;
+    height:80px;
+    background-color:  transparent;
+}
+/* for the current time displayed */
+.current-time-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width:100%;
+    font-size:3.5rem;
+    margin-top:40px;
+    margin-bottom:30px;
+    color:white;
+}
+
+/* for setAlarm */
+.setAlarm{
+    display: flex;
+     justify-content:space-around;
+     width:100%;
+     font-size:2.5rem;
+     margin-bottom:30px;
+     color:white;
+}
+.setAlarm-left input{
+  background-color: whitesmoke;
+  font-size:1.5rem;
+  border:none;
+  color:black;
+  border:2px solid black;
+  padding:5px;
+  width:60px;
+  text-align: center;
+
+}
+.setAlarm-left select{
+    font-size:1.5rem;
+    border:none;
+    background-color:whitesmoke;
+    border:2px solid black;
+    color:grey;
+    padding:5px;
+    width:80px;
+}
+.setAlarm-left input:focus{
+    border-color:grey;
+    color:black;
+    border:3px solid grey;
+}
+/* css for the alramlist */
+.alarm-heading{
+  color:white;
+  margin-bottom:40px;
+}
+.setAlarm-right button{
+     font-size:1.4rem;
+     padding:5px;
+     width:100px;
+     background-color:white;
+     border-radius:4px;
+     cursor:pointer;    
+}
+.setAlarm-right button:hover{
+    background-color:grey;
+    color:white;
+    box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.setAlarm-delete{
+    display: flex;
+    flex-direction:column;
+    justify-content:space-around;
+    width:90%;
+}
+.setAlarm-delete-left{
+  font-size:1.5rem;
+  /* margin-left:90px; */
+ 
+}
+.parent{
+    display:flex;
+    justify-content:space-between;
+    
+}
+.current-time-alarm-left{
+    color:white;
+}
+.current-time-alarm{
+    font-size:1.5rem;
+}
+.current-time-alarm-right button{
+    font-size:1.1rem;
+    padding:3px;
+    margin-bottom:10px;
+    background-color:white;
+    border-radius:4px;
+    cursor:pointer; 
+}
+.current-time-alarm-right button:hover{
+    background-color:grey;
+    color:white;
+     box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.2); 
+}
+
+/* media queries for different devices */
+
+@media screen and (max-width:1024px) {
+    .page-title{
+        top:70px;
+     font-size:0.8rem;   
+    }
+    .container,.current-time-container{
+        width:60%;
+    }
+    
+}
+
+@media screen and (max-width:748px) {
+    .container,.current-time-container{
+        width:70%;
+    }
+}
+
+@media screen and (max-width:650px) {
+    
+    .container,.current-time-container{
+        width:90%;
+    }
+}
+
+@media screen and (max-width:486px) {
+  
+    .container,.current-time-container{
+        width:95%;
+    }
+}
+
+@media screen and (max-width:452px) {
+  
+    .setAlarm{
+        flex-direction: column;
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            font-size: 0.7rem;
+            margin-bottom: 30px;
+            color: white;
+        
+    }
+    .setAlarm-left{
+      margin: auto;
+    }
+    .setAlarm-right{
+        margin:auto;
+    }
+}
+@media screen and (max-width:347px) {
+  .page-title{
+    font-size:0.5rem;
+  }
+    .setAlarm-left input{
+        font-size:1.5rem;
+        padding:5px;
+        width:40px;
+      
+      }
+      .setAlarm-left select{
+          font-size:1.5rem;
+          border:none;
+          background-color:transparent;
+          border:2px solid white;
+          color:grey;
+          padding:5px;
+          width:70px;
+      }
+}
